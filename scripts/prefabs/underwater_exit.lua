@@ -14,6 +14,13 @@ end
 local function OnActivate(inst)
 
 	SetPause(true)
+	GetPlayer().HUD:Hide()
+	
+	-- Stealthily apply wetness now
+	if GetPlayer().components.moisture then
+		GetPlayer().components.moisture:DoDelta(GetPlayer().components.moisture.moistureclamp.max)
+	end
+	
 	local level = GetWorld().topology.level_number or 1
 	local function head_upwards()
 		SaveGameIndex:GetSaveFollowers(GetPlayer())
@@ -33,10 +40,10 @@ local function OnActivate(inst)
 			SaveGameIndex:SaveCurrent(function() SaveGameIndex:EnterCave(onsaved,nil, cave_num, level) end, "ascend", cave_num)
 		end
 	end
-	GetPlayer().HUD:Hide()
+	
 	TheFrontEnd:Fade(false, 2, function()
-									head_upwards()
-								end)
+		head_upwards()
+	end)
 end
 
 

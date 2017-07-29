@@ -81,7 +81,10 @@ local function fn(inst)
 			end)
 		end]]--
 		
-		
+		if player and player.components.moisture then
+			-- For now, there is no such thing as wetness while underwater
+			player.components.moisture:DoDelta(-player.components.moisture.moisture)
+		end
 	end
 	
 	-- Player meters
