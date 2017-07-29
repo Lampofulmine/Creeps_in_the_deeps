@@ -1,3 +1,10 @@
+# Custom stuff
+exported/*
+*.bak
+*.tmp
+*.log
+*log.txt
+
 # Compiled Lua sources
 luac.out
 
