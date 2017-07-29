@@ -1,0 +1,9 @@
+* Solved some bugs and fixes of version 1.0
+	* Night cycle has been added
+	* WX78 health cap while diving has been increased
+	* Changed minimap icon for closed entrance
+	* Fixed sponges/coral infinite harvesting after reloading a game
+	* City Merms now don’t drop wearables
+	* Fixed crash caused by attacking with flare
+	
+	
