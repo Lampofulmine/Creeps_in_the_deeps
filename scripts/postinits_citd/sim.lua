@@ -35,6 +35,8 @@ local function fn(inst)
 			clock.duskColour = Point(54/255,  78/255, 72/255)
 			clock.nightColour = Point(5/255,  0/255, 10/255)
 			clock.dawnColour = Point(42/255,  92/255, 92/255) -- for "Dawnbreak" mod
+			-- crude fix for loading
+			clock:LongUpdate(0)
 		end
 		
 		
