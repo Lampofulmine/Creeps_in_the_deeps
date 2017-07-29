@@ -81,7 +81,6 @@ STRINGS.CHARACTERS.WILLOW.DESCRIBE.SEA_CUCUMBER = "That's a gross looking cucumb
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.FISH_GAZPACHO = "It's nice and hot, my kind of dish."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.TUNA_MUFFIN = "That muffin became HUGE under fire!"
 
--- New strings
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.SEA_PETALS = "Stupid sea petals."
-STRINGS.WILLOW.DESCRIBE.UW_FLOWERS = "It's somehow uglier than a normal flower."
-STRINGS.WILLOW.DESCRIBE.UNDERWATER_EXIT = "Who put a big, stupid anchor here anyway?"
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.UW_FLOWERS = "It's somehow uglier than a normal flower."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.UNDERWATER_EXIT = "Who put a big, stupid anchor here anyway?"
