@@ -128,28 +128,10 @@ local states=
         
         onenter = function(inst)
             inst.AnimState:PlayAnimation("dead", true)
-
-			local fish = SpawnPrefab("fish")
-			fish.Transform:SetPosition(inst.Transform:GetWorldPosition())
 			
-			fish.AnimState:SetBank("commonfish")
-			fish.AnimState:SetBuild("commonfish")
-			
-			fish.Transform:SetFourFaced()
+			inst.Transform:SetFourFaced()
 			local angle = inst.Transform:GetRotation()
-			fish.Transform:SetRotation(angle)
-			
-			fish.AnimState:PlayAnimation("dead", true)
-			
-			if fish.components.inventoryitem then
-				fish.components.inventoryitem:SetOnPickupFn(function(fish)
-					fish.AnimState:SetBank("fish")
-					fish.AnimState:SetBuild("fish")
-					fish.AnimState:PlayAnimation("dead")
-					fish.Transform:SetRotation(0)
-				end)
-			end
-			
+			inst.Transform:SetRotation(angle)
 			inst:Remove()
         end,
     },
