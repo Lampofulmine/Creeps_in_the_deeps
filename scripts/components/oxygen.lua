@@ -103,7 +103,7 @@ function Oxygen:DoDelta(delta, overtime)
 		return
 	end
 
-	-- Oxygen redirection?
+	-- Hook for external shenanigans
     if self.redirect then
         self.redirect(self.inst, delta, overtime)
         return
@@ -197,6 +197,12 @@ function Oxygen:Recalc(dt)
 				self.rate = self.rate*(1-v.components.oxygenapparatus:GetReductionPercentage())
 			end		
 		end
+	end
+	
+	-- No oxygen loss if you don't breathe
+	if self.inst:HasTag("robot") or self.inst:HasTag("waterbreather") then
+		self.rate = 0
+		return
 	end
 	
 	self:DoDelta(self.rate*dt, true)
