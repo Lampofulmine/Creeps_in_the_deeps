@@ -35,7 +35,7 @@ local function fn(Sim)
 	
 	MakeGhostPhysics(inst, 1, .5)
     
-    light:SetIntensity(.4)
+    light:SetIntensity(1)
     light:SetRadius(.5)
     light:SetFalloff(.6)
     light:Enable(true)
