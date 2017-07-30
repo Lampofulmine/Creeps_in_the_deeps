@@ -51,7 +51,7 @@ local function fn(Sim)
     local light = inst.entity:AddLight()
     light:SetFalloff(.5)
     light:SetIntensity(.8)
-    light:SetRadius(1.5)
+    light:SetRadius(2.5)
     light:SetColour(200/255, 100/255, 170/255)
 	light:Enable(false)
 	
@@ -65,7 +65,7 @@ local function fn(Sim)
     inst.components.inventoryitem:SetOnPutInInventoryFn(turnoff)
 
 	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(30*TUNING.SEG_TIME)
+    inst.components.perishable:SetPerishTime(45*TUNING.SEG_TIME)
     inst.components.perishable:SetOnPerishFn(onperish)
 	
     inst:AddTag("light")
