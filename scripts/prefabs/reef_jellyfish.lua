@@ -35,9 +35,9 @@ local function fn(Sim)
 	
 	MakeGhostPhysics(inst, 1, .5)
     
-    light:SetIntensity(1)
-    light:SetRadius(.5)
-    light:SetFalloff(.6)
+    light:SetIntensity(0.6)
+    light:SetRadius(1.5)
+    light:SetFalloff(1.8)
     light:Enable(true)
     light:SetColour(180/255, 195/255, 225/255)
     
@@ -84,8 +84,8 @@ local function fn(Sim)
     inst.components.herdmember.herdprefab = "jellyfishschool"
 	
 	inst:AddComponent("shockaura")
-    inst.components.shockaura.radius = TUNING.GHOST_RADIUS*2
-    inst.components.shockaura.tickperiod = TUNING.GHOST_DMG_PERIOD*2
+    inst.components.shockaura.radius = TUNING.GHOST_RADIUS*1.1
+    inst.components.shockaura.tickperiod = TUNING.GHOST_DMG_PERIOD*1.1
 	inst.components.shockaura:Enable(true)
 	
 	inst:AddComponent("sleeper")
