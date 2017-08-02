@@ -19,6 +19,16 @@ local function OnActivate(inst)
 	-- Stealthily apply wetness now
 	if GetPlayer().components.moisture then
 		GetPlayer().components.moisture:DoDelta(GetPlayer().components.moisture.moistureclamp.max)
+		--if GetPlayer().components.inventory then
+			for k,v in pairs(GetPlayer().components.inventory.itemslots) do
+				--if v.components.moisturelistener then -- Not really necessary
+					v.components.moisturelistener:UpdateMoisture(200)
+				--end
+			end
+			for k,v in pairs(GetPlayer().components.inventory.equipslots) do
+				v.components.moisturelistener:UpdateMoisture(200)
+			end
+		--end
 	end
 	
 	local level = GetWorld().topology.level_number or 1
