@@ -4,8 +4,8 @@ local SeaEelBrain = Class(Brain, function(self, inst)
     Brain._ctor(self, inst)
 end)
 
-local MAX_CHASE_TIME = 6
-local MAX_WANDER_DIST = 20
+local MAX_CHASE_TIME = 4
+local MAX_WANDER_DIST = 15
 local SEE_FOOD_DIST = 10
 
 local function EatFoodAction(inst)
